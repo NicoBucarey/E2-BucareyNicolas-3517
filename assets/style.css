@@ -1,0 +1,66 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* mantengo un ancho fijo predefinido, sin que se sobrepase */
+    list-style-type: none;/* con esta funcion sacamos los puntos a los li */
+    text-decoration: none;/* saco el subrayado a los links */
+    font-family: "Poppins" , sans-serif;
+    color: #ce0c0c;
+}
+:root{
+     /* bg-colors */
+  --background: #02050e;
+  --primary: #1e50ff;
+  --secondary: #272d37;
+  --btn-bg: #050d26;
+  --bg-azul-10: #e9eeff;
+  --bg-white: #fff;
+  --bg-electric: #f0fbff;
+  --nav-bg: #0f1525;
+
+  /* Text colors */
+  --text-gray: #adb8c7;
+  --text-white: #f3f4f6;
+
+  /* Decoration */
+  --fire: #ff6d00;
+  --electric: #64d3ff;
+
+  /* Fonts */
+  --font-poppins: "Poppins";
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-black: 800;
+
+  --font-sm: 14px;
+  --font-xl: 48px;
+}
+header{
+    display: flex;
+    justify-content: space-between; /* para que se separen los bloques a las puntas */
+    align-items: center; /* para que los elementos queden centrados en el eje y  */
+    position: fixed;
+    width: 100%;
+    /* al poner position fixed el header pierde su forma y se acomoda al tamaño del contenido, 
+    es por eso que tenemos que indicarle un ancho del 100%  */
+    background-color: var(--electric);
+    padding: 0px 30px;
+}
+a{
+    text-decoration: none;
+    font-weight: 700;
+}
+.logo{
+    width: 75px;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+}
