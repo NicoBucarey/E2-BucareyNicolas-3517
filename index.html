@@ -5,32 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Pagina Web</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/mediaqueries.css">
 </head>
 <body>
     <header>
-        <a href="#"><img src="assets/imagen logo/logopagina.png" alt="logo pagina" class="logo"></a>
+        <section class="logoNB">
+            <a href="#"><img src="assets/imagenes/logo NB.png" alt="logo pagina" class="logo"></a>
+            <p>Nico Bucarey</p>
+        </section>
         <nav class="navbar">
-            <ul>
+
+            <!-- <label for="menu-toggle" class="menu-label">
+                <img src="assets/imagenes/icono hamburguesa.png" alt="">
+            </label>
+            <input type="checkbox" id="menu-tuggle"> -->
+
+            <ul class="navbar-list">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Servicio</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Clientes</a></li>
             </ul>
+            <!-- ----Carrito desplegable---- -->
+            <!-- <label for="cart-toggle" class="cart-label">
+                <img src="assets/imagenes/cart-icon.png" alt="carrito" class="cart-icon">
+            </label>
+            <input type="checkbox" id="cart-toggle"/>
+
+             ----CARRITO---- 
+            <div class="cart">
+                <h2>Tus Productos</h2>
+            </div>
+             -->
+
+            <!-- ---PRODUCTOS DENTRO DEL CARRITO---  -->
         </nav> 
     </header>
     <!-- portada -->
     <main>
         <section id="hero">
             <div class="info-hero">
-                <h3>Titulo de la portada</h3>
-                <p>informacion dentro del parrafo</p>
+                <h1>Club Atletico <br>Boca Juniors</h1>
+                <h2>¡Bienvenidos a la tienda del Club!</h2>
+                <p>NB es una pagina web dedicada a la venta de productos de Boca Juniors </p>
                 <div class="option-buttons">
-                    <button class="button1">boton 1</button>
-                    <button class="button2">boton 2</button>
+                    <button class="button">¡Ofertas!</button>
+                    <button class="button">¡Promocion del dia!</button>
                 </div>
             </div>
-            <img src="assets/imagenes/signopregunta.png" alt="">
+            <img src="assets/imagenes/escudo Boca Juniors.png" alt="">
+        </section>
+
+        <section id="info">
+            <h2>Explora nuestra Pagina</h2>
+            <p class="promotion-paragraph">¡Vas a encontrar eso que estabas buscando de nuestro Club y mas!</p>
+            <div class="info-card-container">
+                <!-- CARD 1 -->
+                <div class="info-card">
+                    <img src="assets/imagenes/info/camisetas.png" alt="">
+                    <h3>Camisetas Historicas</h3>
+                    <p>Las reliquias que estabas buscando las encontras en NB</p>
+                </div>
+                <!-- CARD 2 -->
+                <div class="info-card">
+                    <img src="assets/imagenes/info/copas.png" alt="">
+                    <h3>Copas</h3>
+                    <p>En nuestro local tenemos distintas Copas para que puedas tener tu foto con las mismas, ¡Acercate!</p>
+                </div>
+                <!-- CARD 3 -->
+                <div class="info-card">
+                    <img src="assets/imagenes/info/articulo.png" alt="">
+                    <h3>Distintos Productos</h3>
+                    <p>Tambien tenemos distintos productos para vos </p>
+                </div>
+            </div> 
+        </section>
+
+        <section id="products-container">
+            <h2>Productos</h2>
+
+            <h3 class="title-products">Camisetas</h3>
+            <div class="products">
+                <div class="articles">
+                    <img src="assets/imagenes/productos/camisetas/camiseta titular.png" alt="">
+                    <div class="info-product">
+                        <h4>Camiseta titular</h4>
+                        <p>$15.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/camisetas/camiseta suplente.png" alt="">
+                    <div class="info-product">
+                        <h4>Camiseta suplente</h4>
+                        <p>$15.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>                    
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/camisetas/tercera camiseta.png" alt="">
+                    <div class="info-product">
+                        <h4>Tercera camiseta</h4>
+                        <p>$15.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>                    
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/camisetas/camiseta entrenamiento.png" alt="">
+                    <div class="info-product">
+                        <h4>Camiseta entrenamiento</h4>
+                        <p>$15.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <h3 class="title-products">Shorts</h3>
+            <div class="products">
+                <div class="articles">
+                    <img src="assets/imagenes/productos/shorts/short titular.png" alt="">
+                    <div class="info-product">
+                        <h4>Short titular</h4>
+                        <p>$7.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/shorts/short suplente.png" alt="">
+                    <div class="info-product">
+                        <h4>Short suplente</h4>
+                        <p>$7.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/shorts/tercer short.png" alt="">
+                    <div class="info-product">
+                        <h4>Tercer Short</h4>
+                        <p>$7.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                   
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/shorts/short entrenamiento.png" alt="">
+                    <div class="info-product">
+                        <h4>Short de entrenamiento</h4>
+                        <p>$7.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <h3 class="title-products">Buzos</h3>
+            <div class="products">
+                <div class="articles">
+                    <img src="assets/imagenes/productos/buzos/buzo1.png" alt="">
+                    <div class="info-product">
+                        <h4>Buzo Boca Juniors</h4>
+                        <p>$20.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                        
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/buzos/buzo2.png" alt="">
+                    <div class="info-product">
+                        <h4>Buzo Boca Juniors</h4>
+                        <p>$20.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/buzos/buzo3.png" alt="">
+                    <div class="info-product">
+                        <h4>Buzo Boca Juniors</h4>
+                        <p>$20.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    
+                </div>
+                <div class="articles">
+                    <img src="assets/imagenes/productos/buzos/buzo4.png" alt="">
+                    <div class="info-product">
+                        <h4>Buzo Boca Juniors</h4>
+                        <p>$20.000</p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    
+                </div>
+            </div>
         </section>
     </main>
+    <footer>
+        aca iria el footer 
+    </footer>
 </body>
 </html>

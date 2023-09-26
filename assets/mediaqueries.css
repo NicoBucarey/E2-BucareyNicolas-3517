@@ -1,0 +1,10 @@
+
+/* para tablet */
+@media (max-width:992px){
+#hero img{
+    display: none
+}
+.products{
+    flex-wrap: wrap;
+}
+}

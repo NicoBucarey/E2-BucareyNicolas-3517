@@ -1,5 +1,12 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+body{
+    /* background-color: #050d26; */
+    background: rgb(8,0,255);
+    background: linear-gradient(180deg, rgba(8,0,255,1) 26%, rgb(220, 223, 10) 51%, rgba(8,0,255,1) 89%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,18 +14,21 @@
     list-style-type: none;/* con esta funcion sacamos los puntos a los li */
     text-decoration: none;/* saco el subrayado a los links */
     font-family: "Poppins" , sans-serif;
-    color: #311313;
+    /* color: #d32121; */
 
 }
 :root{
      /* bg-colors */
   --background: #02050e;
-  --primary: #1e50ff;
-  --secondary: #272d37;
+  --primary: #031350;
+  --secondary: #f8e005d8;
   --btn-bg: #050d26;
-  --bg-azul-10: #e9eeff;
-  --bg-white: #fff;
-  --bg-electric: #f0fbff;
+  --primary-transparent:#03125091;
+  --secondary-transparent: #f8e005c4;
+  --white-transparent:#ffffff94;
+  /* --bg-azul-10: #e9eeff; */
+  /* --bg-white: #fff; */
+  /* --bg-electric: #f0fbff; */
   --nav-bg: #0f1525;
 
   /* Text colors */
@@ -38,8 +48,18 @@
   --font-black: 800;
 
   --font-sm: 14px;
+  --font-sd: 18px;
+  --font-md: 32px;
   --font-xl: 48px;
 }
+/* ----------------------------HEADER------------------------------- */
+/* #menu-toggle, .menu-label, #cart-toggle{
+    display: none;
+}
+.cart::-webkit-scrollbar {
+    display: none;
+  }
+   */
 header{
     display: flex;
     justify-content: space-between; /* para que se separen los bloques a las puntas */
@@ -48,50 +68,265 @@ header{
     width: 100%;
     /* al poner position fixed el header pierde su forma y se acomoda al tamaño del contenido, 
     es por eso que tenemos que indicarle un ancho del 100%  */
-    background-color: var(--electric);
-    padding: 0px 30px;
-    position: fixed;
+    /* background-color: var(--primary); */
+    background: linear-gradient(to bottom, var(--primary),rgba(8,0,255,1) );
+    padding: 0px 40px; /* ya con el padding a los costados evito que los objetos queden en el borde  */
+    height: 65px;
 }
-a{
-    text-decoration: none;
-    font-weight: 700;
+/* ----LOGO---- */
+.logoNB{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
 }
 .logo{
-    width: 75px;
+    height: 30px;
+    width: 95px;
 }
-.navbar ul{
+.logoNB p{
+    position: relative;
+    top: -5px; 
+    color: var(--secondary);
+    font-size: var(--font-sm);
+    font-style: italic;
+    font-weight: var(--font-semibold);
+}
+
+/* ----NAVBAR---- */
+
+.navbar, .navbar-list{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 10px;
+    justify-content: center;   
+    font-weight: var(--font-bold);
+    font-size: var(--font-sd);
 }
-main{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.navbar{
+    gap: 10rem;
 }
+.navbar-list{
+    gap: 30px;
+}
+.navbar-list a{
+    color: var(--secondary);
+    font-size: var(--font-sm);
+}
+.cart-icon{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/*----- PORTADA ----  */
 #hero{
     display: flex;
-    background-color: #ce0c0c;
-    padding: 150px 100px;
-    justify-content: space-between;
-    max-width: 1200px;
     justify-content: center;
     align-items: center;
-    
+    /* background-color: #705151; */
+    padding: 150px 100px;
+    gap: 4rem;
+    max-width: 1200px;
+    margin-top: 65px;
 }
 .info-hero{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    align-items: center;
+    /* justify-content:center; */
+    width: 70%;
+    gap: 20px;
+    background-color: #1c047571;
+    padding: 10px;
+    border-radius: 10px;
 }
-.info-hero h3, p{
-    color:#0ed40e;
+.info-hero h1{
+    /* background-color: #1e50ff; */
+    min-width: 500px;
+    width: 90%;
+    /* font-size: 40px; */
+    font-size: var(--font-xl);
+    font-weight: var(--font-black);
+    text-align: center;
+    /* color: var(--secondary); */
 }
+
+.info-hero h1, h2,p{
+    color: var(--secondary);
+
+}
+.info-hero p{
+    display: flex;
+    /* background-color: #311313; */
+    width: 70%;
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+    /* color: var(--secondary); */
+    font-style: italic;
+}
+.option-buttons{
+    display: flex;
+    gap:30px;
+
+}
+.button{
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: var(--font-sd);
+    font-weight: var(--font-bold);
+}
+
 #hero img{
-    width: 300px;
+    width: 280px;
     height: 300px;
+    /* background-color: var(--primary); */
 }
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+ /* ------------------------- INFO ----------------------------- */
+ #info{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+    gap: 40px;
+ }
+ #info .promotion-paragraph{
+    font-size: var(--font-sd);
+    font-weight: var(--font-bold);
+    background-color: var(--primary-transparent);
+    width: 80%;
+    border-radius: 13px;
+    text-align: center;
+ }
+ #info h2, #products-container h2{
+    font-size: var(--font-md);
+    font-weight: var(--font-bold);
+    background-color: var(--primary-transparent);
+    width: 100%;
+    border-radius: 13px;
+    text-align: center;
+ }
+
+ #info 
+ .info-card-container{
+    display: flex;
+    flex-wrap: wrap;/* permite que el contenido se desplace hacia abajo en caso de ser necesario */
+    gap: 30px;
+ }
+ .info-card{
+    height: 380px;
+    width: 300px;
+    background-color: var(--primary-transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 15px;
+ }
+ .info-card img{
+    height: 220px;
+    width: 280px;
+    border-radius: 10px;
+    background-color: var(--white-transparent);
+ }
+ .info-card p{
+    text-align: center;
+ }
+ .info-card h3{
+    font-size: var(--font-sd);
+    font-weight: var(--font-bold);
+    color: var(--secondary);
+ }
+
+
+ /* -------------------------------------------PRODUCTOS------------------------------------ */
+ #products-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    /* background-color: #adb8c7; */
+    width: 100%;
+ }
+
+ .title-products{
+    background-color: var(--secondary-transparent);
+    width: 95%;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: var(--font-bold);
+    color: var(--primary);
+ }
+ .products{ 
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;   
+ }
+
+
+ .articles{
+    background-color: var(--primary-transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    gap: 15px;
+    border-radius: 8px;
+    padding: 10px;
+ }
+ .articles img{
+    height: 230px;
+    width: 210px;
+    background-color: var(--white-transparent);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+ }
+ .info-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+ }
+ .info-product h4{
+    color: var(--secondary);
+ }
+ .info-product button{
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: var(--font-bold);
+ }
+
+ footer{
+    background-color: #adb8c7;
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px 10px 0px;
+ }
